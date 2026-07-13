@@ -12,7 +12,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-DOMAINS = ["Yelp", "Amazon", "Twitter", "Reddit", "PhraseBank"]
+DOMAINS = ["Yelp", "Amazon", "Twitter", "Reddit", "PhraseBank (OOD)"]
 
 # report/final_report.pdf Table 1 (Raw DistilBERT, fine-tuned LODO model) and Table 2 (DANN)
 RAW_DISTILBERT = [0.5000, 0.5105, 0.5015, 0.5128, 0.3221]
