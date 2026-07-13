@@ -1,0 +1,11 @@
+torch
+transformers
+datasets
+kagglehub
+emoji
+nltk
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn

@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Data (fetched at runtime, never committed)
+*.json
+sentiment_data.csv
+results.csv
+financial_phrasebank_binary.csv
+
+# Model snapshots / checkpoints
+*.pt
+*.bin
+*.safetensors
+distilbert-base-uncased-local/
