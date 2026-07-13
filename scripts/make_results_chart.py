@@ -18,6 +18,10 @@ DOMAINS = ["Yelp", "Amazon", "Twitter", "Reddit", "PhraseBank (OOD)"]
 RAW_DISTILBERT = [0.5000, 0.5105, 0.5015, 0.5128, 0.3221]
 FINETUNED_LODO = [0.5200, 0.5070, 0.5020, 0.5040, 0.4644]
 DANN = [0.7420, 0.7110, 0.6520, 0.6040, 0.6280]
+# Off-the-shelf SST-2 DistilBERT reference (report Table 2) — a general sentiment
+# model that still beats DANN on the review domains; shown as a per-domain marker
+# so the chart tells the same honest story as the results table.
+SST2_REFERENCE = [0.9370, 0.8910, 0.6490, 0.6400, 0.7050]
 
 SERIES = [
     ("Raw DistilBERT (no fine-tuning)", RAW_DISTILBERT),
@@ -56,6 +60,16 @@ def render(mode: str, out: Path) -> None:
     for i, (label, values) in enumerate(SERIES):
         bars = ax.bar(x + (i - 1) * (width + 0.02), values, width, label=label, color=t["colors"][i], zorder=3)
         ax.bar_label(bars, fmt="%.2f", padding=2, fontsize=8, color=t["ink"])
+
+    # Off-the-shelf SST-2 reference: a dashed marker spanning each domain group so
+    # the caveat in the results table is visible in the chart itself.
+    half = 1.5 * (width + 0.02)
+    for xi, ref in zip(x, SST2_REFERENCE):
+        ax.plot(
+            [xi - half, xi + half], [ref, ref],
+            color=t["muted"], linewidth=1.4, linestyle=(0, (3, 2)), zorder=4,
+            label="Off-the-shelf SST-2 reference" if xi == 0 else None,
+        )
 
     ax.axhline(0.5, color=t["muted"], linewidth=1, linestyle=(0, (4, 4)), zorder=2)
     ax.text(len(DOMAINS) - 0.52, 0.512, "coin flip", fontsize=8, color=t["muted"], ha="right", va="bottom")

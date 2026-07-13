@@ -13,8 +13,10 @@ domain-shift gap directly and tests whether adversarial domain adaptation can
 close it when labeled data is scarce.
 
 > Course research project for **CMSC472 (Introduction to Deep Learning)** at the
-> University of Maryland. Full write-up in [`report/final_report.pdf`](report/final_report.pdf);
-> the numbers below are as reported there.
+> University of Maryland, originally developed in Google Colab during the course;
+> this repository is the cleaned-up public release. Full write-up in
+> [`report/final_report.pdf`](report/final_report.pdf); the numbers below are as
+> reported there.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/img/results_dark.png">
