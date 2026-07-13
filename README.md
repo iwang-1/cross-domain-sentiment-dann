@@ -1,5 +1,7 @@
 # Cross-Domain Sentiment Classification under Domain Shift
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iwang-1/cross-domain-sentiment-dann/blob/main/cross_domain_sentiment.ipynb)
+
 Small-data **domain generalization** for sentiment classification across four
 online platforms — Yelp, Amazon, Twitter (X), and Reddit — using DistilBERT, a
 **leave-one-domain-out (LODO)** evaluation protocol, and a **Domain-Adversarial
@@ -135,8 +137,10 @@ python scripts/make_results_chart.py   # writes docs/img/results_{light,dark}.pn
 > **Note on reproducibility.** The datasets are large and some preprocessing steps
 > (notably the Financial PhraseBank binary subset) were run interactively in Colab,
 > so exact numbers depend on sampling seeds and the Colab environment. The committed
-> `results/dann_results.csv` is a small local run; treat the report's tables as the
-> canonical figures.
+> `results/dann_results.csv` is a smoke-test-scale local run on much smaller,
+> differently-sampled subsets (validation splits of only ~30 examples), so its
+> accuracies are not comparable to the report's LODO tables; treat the report's
+> tables as the canonical figures.
 
 ## Datasets
 
