@@ -12,9 +12,8 @@ accuracy when it meets informal social-media text. This project measures that
 domain-shift gap directly and tests whether adversarial domain adaptation can
 close it when labeled data is scarce.
 
-> Course research project for **CMSC472 (Introduction to Deep Learning)** at the
-> University of Maryland, originally developed in Google Colab during the course;
-> this repository is the cleaned-up public release. Full write-up in
+> A cleaned-up public release of a deep-learning project originally developed
+> in Google Colab. Full write-up in
 > [`report/final_report.pdf`](report/final_report.pdf); the numbers below are as
 > reported there.
 
@@ -157,10 +156,9 @@ Raw data is **not** committed — it is fetched at runtime from the sources abov
 
 ## Authors
 
-Ivan Wang, Evan Zhang, Unlam Leong, Jessie Gu, Raymond Chen — University of Maryland,
-CMSC472.
+Ivan Wang, Evan Zhang, Unlam Leong, Jessie Gu, Raymond Chen.
 
 ## License
 
 Code released under the [MIT License](LICENSE). The PDF write-up and proposal in
-`report/` are the authors' academic work, included for reference.
+`report/` are the authors' work, included for reference.
